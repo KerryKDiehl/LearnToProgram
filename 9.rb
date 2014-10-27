@@ -61,46 +61,46 @@ number = gets.chomp.to_i
 def roman_numeral number
 	if number/1000 > 0
 		m = number/1000		
-		uH = number%1000
 	else
 		m = 0
-		uH = number%1000
 	end
+		uH = number%1000
+
 	if uH/500 > 0
 		d = uH/500
-		h = uH%500
 	else
 		d = 0
-		h = uH%500
 	end
+		h = uH%500
+
 	if h/100 > 0
 		c = h/100
-		uT = h%100
 	else
 		c = 0
-		uT = h%100
-	end				
+	end			
+		uT = h%100	
+
 	if uT/50 > 0
 		l = uT/50
-		t = uT%50
 	else
 		l = 0
-		t = uT%50
 	end
+		t = uT%50	
+
 	if t/10 > 0
 		x = t/10
-		uS = t%10
 	else
 		x = 0
-		uS = t%10
 	end	
+		uS = t%10
+
 	if uS/5 > 0
 		v = uS/5
-		s = uS%5
 	else
 		v = 0
-		s = uS%5
 	end
+		s = uS%5
+
 	if s/1 > 0
 		i = s/1
 	else
