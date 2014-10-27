@@ -54,65 +54,38 @@ puts wets_bed
 
 
 
+
 # Old-school Roman numerals.  Write a method that when passed an integer between 
 #1 and 3000 returns a string containing the proper old-school Roman numerals.
 puts 'Please enter a number'
 number = gets.chomp.to_i
-def roman_numeral number
-	if number/1000 > 0
-		m = number/1000		
-	else
-		m = 0
+def roman_numeral_shortened number
+	
+	m = number/1000		
+		upperHundreds = number%1000
+	d = upperHundreds/500
+		hundreds = upperHundreds%500
+	c = hundreds/100
+		upperTens = hundreds%100	
+	l = upperTens/50
+		tens = upperTens%50	
+	x = tens/10
+		upperSingles = tens%10
+	v = upperSingles/5
+		singles = upperSingles%5
+	i = singles/1
+
+	numeral_multiple = [m,d,c,l,x,v,i]
+	place = 0
+	if numeral_multiple[place] == nil 
+		numeral_multiple[place] = 0
+		place += 1
 	end
-		uH = number%1000
+	numeral_multiple
 
-	if uH/500 > 0
-		d = uH/500
-	else
-		d = 0
-	end
-		h = uH%500
-
-	if h/100 > 0
-		c = h/100
-	else
-		c = 0
-	end			
-		uT = h%100	
-
-	if uT/50 > 0
-		l = uT/50
-	else
-		l = 0
-	end
-		t = uT%50	
-
-	if t/10 > 0
-		x = t/10
-	else
-		x = 0
-	end	
-		uS = t%10
-
-	if uS/5 > 0
-		v = uS/5
-	else
-		v = 0
-	end
-		s = uS%5
-
-	if s/1 > 0
-		i = s/1
-	else
-		i = 0
-	end
-	puts 'M'*m.to_i + 'D'*d.to_i + 'C'*c.to_i + 'L'*l.to_i + 'X'*x.to_i + 'V'*v.to_i + 'I'*i.to_i
+	puts 'M'*m + 'D'*d + 'C'*c + 'L'*l + 'X'*x + 'V'*v + 'I'*i
 end
-roman_numeral number
-
-
-
-
+roman_numeral_shortened number
 
 
 
