@@ -14,7 +14,6 @@ puts x + '.'
 =end
 
 # Improved ask method.  Try cleaning up the ask method by removing the answer variable.
-=begin
 def ask question
 	while true
 		puts question
@@ -50,7 +49,7 @@ puts 'DEBRIEFING:'
 puts 'Thank you for participating'
 puts
 puts wets_bed
-=end
+
 
 
 

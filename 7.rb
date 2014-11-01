@@ -26,7 +26,8 @@ while bottles > 0
 end
 
 
-#Deaf grandma.  Whatever you say to Grandma will get a certain response unless you shout it (type in all capitals), then she yells something else back.
+#Deaf grandma.  Whatever you say to Grandma will get a certain response unless you shout it (type in 
+# all capitals), then she yells something else back.
 puts "What do you want to say to Grandma?"
 say = gets.chomp
 if say == "BYE"
